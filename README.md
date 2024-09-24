@@ -58,7 +58,7 @@ Ticker,01/2024,02/2024,03/2024,04/2024,05/2024,06/2024,07/2024,08/2024,09/2024
 AG,,,1.58,,,1.58,,,1.58,,,
 FLKR,,,,,,129.49,,,,
 GOLD,,,127.52,,128.37,,,129.07
-...
+```
 
 **Note**: The payouts for the same ticker within the same month are summed together.
 

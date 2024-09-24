@@ -10,11 +10,7 @@ This script transforms a CSV file containing dividend and interest data into a n
 
 ## Usage Instructions
 
-1. **Place the Script and CSV File in the Same Directory**:
-
-   Ensure that `transform_dividends.py` and your input CSV file (e.g., `dividends.csv`) are in the same folder.
-
-2. **Run the Script with Required Arguments**:
+1. **Run the Script with Required Arguments**:
 
    - **Basic Usage** (aggregate by individual dates):
 

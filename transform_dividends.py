@@ -59,6 +59,9 @@ def main():
     dates = sorted(dates_set, key=date_key)
     tickers = sorted(tickers_set)
 
+    # Initialize totals per date
+    totals_per_date = defaultdict(float)
+
     # Write the transformed data
     with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
@@ -71,12 +74,22 @@ def main():
             for date in dates:
                 amount = payouts[ticker].get(date, '')
                 if amount != '':
+                    amount_float = amount  # Keep the float value for totaling
                     amount = f'{amount:.2f}'
+                    totals_per_date[date] += amount_float
                 row.append(amount)
             writer.writerow(row)
+        # Add a total row
+        total_row = ['Total']
+        for date in dates:
+            total_amount = totals_per_date.get(date, 0.0)
+            if total_amount != 0.0:
+                total_row.append(f'{total_amount:.2f}')
+            else:
+                total_row.append('')
+        writer.writerow(total_row)
 
     print(f"Transformation complete. Output saved to {output_file}.")
 
 if __name__ == '__main__':
     main()
-

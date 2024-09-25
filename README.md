@@ -2,6 +2,8 @@
 
 This script transforms a CSV file containing dividend and interest data into a new format where dates are columns, stock symbols are rows, and payouts are placed in the corresponding cells. It supports aggregating payouts by individual dates or by months.
 
+![ticker](screenshot.png)
+
 ## Features
 
 - **Input File**: Accepts an input CSV file containing dividend data.
